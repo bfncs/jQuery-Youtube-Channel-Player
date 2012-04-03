@@ -5,6 +5,9 @@
 * Based on [jQuery.youtubeChannel](https://github.com/dharyk/jQuery.youtubeChannel) by Miguel Guerreiro (dharyk)
 * Licensed under the MIT license (see license.txt)
 
+## Demo
+
+You can find a demo here: http://boundaryfunctions.github.com/jQuery-Youtube-Channel-Player/
 
 ## Usage
 
