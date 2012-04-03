@@ -1,0 +1,35 @@
+{
+    "name": "jquery.ytChanPlayer",
+    "version": "0.0.1",
+    "title": "jQuery Youtube Channel Player",
+    "author": {
+        "name": "Marc Loehe",
+        "url": "https://github.com/boundaryfunctions"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "MIT-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": "1.x"
+    },
+    "description": "A widget to show videos from a Youtube channel as thumbnails with a player",
+    "keywords": [
+        "video",
+        "youtube",
+        "channel",
+        "youtube channel",
+        "player",
+        "youtube player",
+        "widget"
+    ],
+    "homepage": "https://github.com/boundaryfunctions/jQuery-Youtube-Channel-Player",
+    "docs": "readme.md",
+    "demo": "http://boundaryfunctions.github.com/jQuery-Youtube-Channel-Player/",
+    "files": [
+        "jquery.ytChanPlayer.js",
+        "jquery.ytChanPlayer.min.js"
+    ]
+}

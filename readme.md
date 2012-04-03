@@ -3,7 +3,7 @@
 ## Widget to show videos from a Youtube channel with a player
 * Author: Marc Loehe (boundaryfunctions)
 * Based on [jQuery.youtubeChannel](https://github.com/dharyk/jQuery.youtubeChannel) by Miguel Guerreiro (dharyk)
-* Licensed under the MIT license (see license.txt)
+* Licensed under the MIT license (see MIT-LICENSE.txt)
 
 ## Demo
 
