@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery: YouTube Channel Player Plugin</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />  
+</head>
+<body>
+  <div id="wrapper" style="width: 540px; margin: 0 auto;">
+    <h1>My Channel</h1>
+    <div id="ytChanPlayer"></div>
+  </div><!-- /#wrapper -->
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/jquery.ytChanPlayer.js"></script>
+  <script>
+  (function ($) {
+    $(document).ready(function () {
+      $('#ytChanPlayer').ytChanPlayer({
+        channel: 'youtube',
+        maxResults: 10,
+      });
+    });
+  }(jQuery));
+</script>
+</body>
+</html>

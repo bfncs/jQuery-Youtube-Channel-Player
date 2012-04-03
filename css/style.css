@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.yt-channel-holder .yt-player {
+  width: 540px;
+  height: 396px;
+  border: 0;
+}
+
+.yt-channel-holder .yt-channel-list {
+  overflow: auto;
+  margin: 0 -5px 0 0;
+  padding: 0;
+  list-style: none outside none;
+}
+
+.yt-channel-holder .yt-channel-list .yt-channel-video {
+  float: left;
+  padding: 0 4px 4px 0;
+}
+
+.yt-channel-holder .yt-channel-list .yt-channel-video a {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.yt-channel-holder .yt-channel-list .yt-channel-video img {
+  display: block;
+  width: 105px;
+  height; auto;
+}
+
+
