@@ -13,23 +13,15 @@ You can find a demo here: http://boundaryfunctions.github.com/jQuery-Youtube-Cha
 
 ### Basic
 
-To display a channel:
-
     $('#ytChanPlayer').ytChanPlayer({
       username: 'youtube',
-    });
-
-To display results of a query:
-
-    $('#ytChanPlayer').ytChanPlayer({
-      query: 'youtube',
     });
 
 ### Options
 
 
 * `username` - username to show channel for
-* `query` - query to look for
+* `query` - query to limit which channel videos should be played
 * `startIndex: 1` - index of the first matching result that should be included in the result set
 * `maxResults: 10` - maximum number of results that should be included in the result set
 * `orderBy: published` - method that will be used to order entries (valid for this parameter: published, relevance, viewCount, rating)
