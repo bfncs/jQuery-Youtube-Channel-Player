@@ -8,6 +8,10 @@
   <div id="wrapper" style="width: 540px; margin: 0 auto;">
     <h1>My Channel</h1>
     <div id="ytChanPlayer"></div>
+    <div>
+      <p>To see what's going on, have a look at the source.</p>
+      <p>You can find the plugin and additional documentation in the <a href="https://github.com/boundaryfunctions/jQuery-Youtube-Channel-Player" title="jQuery Youtube Channel Player Github Repository" target="_blank">Github repository</a>.</p>
+    </div>
   </div><!-- /#wrapper -->
   <script src="js/jquery-1.7.1.min.js"></script>
   <script src="js/jquery.ytChanPlayer.js"></script>
@@ -15,7 +19,7 @@
   (function ($) {
     $(document).ready(function () {
       $('#ytChanPlayer').ytChanPlayer({
-        channel: 'youtube',
+        username: 'youtube',
         maxResults: 10,
       });
     });
