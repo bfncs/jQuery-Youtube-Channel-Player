@@ -1,4 +1,4 @@
-/* jQuery Youtube Channel Player
+/* jQuery Youtube Channel Player 0.1.1
  * Author: Marc Loehe (boundaryfunctions)
  * Based on jQuery.youtubeChannel by Miguel Guerreiro (dharyk)
  * Licensed under the MIT license
@@ -6,8 +6,7 @@
 
 (function ($) {
 	$.fn.ytChanPlayer = function (settings) {
-		var version	= {major: 0, minor: 1, build: 0},
-			$ytEl	= $(this),
+		var $ytEl	= $(this),
 			$ytPlayer,
 			$ytList	= $('<ul/>', {'class': 'yt-channel-list'}),
 			options	= $.extend({}, {
@@ -19,7 +18,7 @@
 			  playerOpts: {
 			    autohide: 1,
 			    autoplay: 0,
-			    egm: 1,			    
+			    egm: 1,
 			    fs: 1,
 			    showinfo: 0,
 			    wmode: 'opaque'
@@ -75,7 +74,11 @@
 		  var i, html, vid, e;
 			// add the header
 			if (data.feed.entry) {
-			  buildPlayer(data.feed.entry[0].id.$t.match('[^/]*$'));
+			  if (options.sticky) {
+			    buildPlayer(options.sticky);
+			  } else {
+			    buildPlayer(data.feed.entry[0].id.$t.match('[^/]*$'));
+			  }
 				// add the items
 				for (i = 0; i < data.feed.entry.length; i++) {
 					e = data.feed.entry[i];
