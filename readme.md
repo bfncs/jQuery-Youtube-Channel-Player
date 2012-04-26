@@ -34,13 +34,13 @@ You can find a demo here: http://boundaryfunctions.github.com/jQuery-Youtube-Cha
   * `showinfo: 0` - whether information like the video title and uploader should be displayed before the video starts playing
   * Additionally all [documented API options](https://developers.google.com/youtube/player_parameters) will work.
 
-### Changelog
+## Changelog
 
 
-#### v 0.1.1
+### v 0.1.1
 
   * Added sticky option
 
-#### v 0.1
+### v 0.1
 
   * Initial commit
