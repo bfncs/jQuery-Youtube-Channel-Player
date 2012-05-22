@@ -1,10 +1,11 @@
-/* jQuery Youtube Channel Player 0.1.1
+/* jQuery Youtube Channel Player 0.1.2
  * Author: Marc Loehe (boundaryfunctions)
  * Based on jQuery.youtubeChannel by Miguel Guerreiro (dharyk)
  * Licensed under the MIT license
  */
 
 (function ($) {
+  "use strict";
 	$.fn.ytChanPlayer = function (settings) {
 		var $ytEl	= $(this),
 			$ytPlayer,
@@ -60,11 +61,18 @@
 			    $ytPlayer.attr('src', src).prependTo($ytEl);
 			  }
 			},
+			zeroFill = function (number, width) {
+        width -= number.toString().length;
+        if (width > 0) {
+          return [width + (/\./.test(number) ? 2 : 1) ].join('0') + number;
+        }
+        return (number).toString();
+      },
 			parseTime	= function (secs) {
 				var m, s = parseInt(secs, 10);
 				m = Math.floor(s / 60);
 				s -= (m * 60);
-				return m + ':' + s;
+				return m + ':' + zeroFill(s, 2);
 			};
 		// setup the html
 		$ytEl.addClass('yt-channel-holder');

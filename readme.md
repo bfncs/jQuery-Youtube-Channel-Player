@@ -36,6 +36,9 @@ You can find a demo here: http://boundaryfunctions.github.com/jQuery-Youtube-Cha
 
 ## Changelog
 
+### v 0.1.2
+
+  * Fixed video-time output
 
 ### v 0.1.1
 
