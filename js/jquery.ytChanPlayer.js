@@ -5,6 +5,7 @@
  */
 
 (function ($) {
+  "use strict";
 	$.fn.ytChanPlayer = function (settings) {
 		var $ytEl	= $(this),
 			$ytPlayer,
@@ -33,7 +34,7 @@
 					  'orderby=' + options.orderBy,
 					  'start-index=' + options.startIndex,
 					  'max-results=' + options.maxResults,
-            'callback=?'
+					  'callback=?'
 					];
 				if (options.username !== '') {
 					params.push('author=' + options.username);
@@ -61,11 +62,18 @@
 			    $ytPlayer.attr('src', src).prependTo($ytEl);
 			  }
 			},
+			zeroFill = function (number, width) {
+        width -= number.toString().length;
+        if (width > 0) {
+          return [width + (/\./.test(number) ? 2 : 1) ].join('0') + number;
+        }
+        return (number).toString();
+      },
 			parseTime	= function (secs) {
 				var m, s = parseInt(secs, 10);
 				m = Math.floor(s / 60);
 				s -= (m * 60);
-				return m + ':' + s;
+				return m + ':' + zeroFill(s, 2);
 			};
 		// setup the html
 		$ytEl.addClass('yt-channel-holder');
