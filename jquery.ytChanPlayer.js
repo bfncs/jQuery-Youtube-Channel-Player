@@ -1,4 +1,4 @@
-/* jQuery Youtube Channel Player 0.1.2
+/* jQuery Youtube Channel Player 0.1.3
  * Author: Marc Loehe (boundaryfunctions)
  * Based on jQuery.youtubeChannel by Miguel Guerreiro (dharyk)
  * Licensed under the MIT license
@@ -33,7 +33,8 @@
 					  'alt=json',
 					  'orderby=' + options.orderBy,
 					  'start-index=' + options.startIndex,
-					  'max-results=' + options.maxResults
+					  'max-results=' + options.maxResults,
+					  'callback=?'
 					];
 				if (options.username !== '') {
 					params.push('author=' + options.username);

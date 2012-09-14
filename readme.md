@@ -36,6 +36,11 @@ You can find a demo here: http://boundaryfunctions.github.com/jQuery-Youtube-Cha
 
 ## Changelog
 
+### v 0.1.3
+
+  * Fixed JSON-Request to work with Internet Explorer
+  * Updated demo to work with jQuery 1.8.1
+
 ### v 0.1.2
 
   * Fixed video-time output
