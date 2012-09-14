@@ -32,7 +32,8 @@
 					  'alt=json',
 					  'orderby=' + options.orderBy,
 					  'start-index=' + options.startIndex,
-					  'max-results=' + options.maxResults
+					  'max-results=' + options.maxResults,
+            'callback=?'
 					];
 				if (options.username !== '') {
 					params.push('author=' + options.username);
