@@ -11,18 +11,8 @@
     var $ytEl = $(this),
       $ytList = $('<ul/>', {'class': 'yt-channel-list'}),
       $ytPlayer,
-      options = $.extend({}, {
-        apiKey: '',
-        username: '',
-        maxResults: 10,
-        debug: false,
-        playerOpts: {
-          autohide: 1,
-          autoplay: 0,
-          fs: 1,
-          showinfo: 0
-        }
-      }, settings),
+      $ytPlayerWrapper,
+      options = $.extend({}, $.fn.ytChanPlayer.defaults, settings),
       playerInitialized = false,
       videos = [],
 
@@ -38,7 +28,9 @@
       buildPlayer = function (videoId) {
         if (videoId.length > 0) {
           if (!$ytPlayer) {
-            $ytPlayer = $('<iframe/>', {class: 'yt-player'}).prependTo($ytEl);
+            $ytPlayerWrapper = $('<div/>', {class: 'yt-player-wrapper'});
+            $ytPlayer = $('<iframe/>', {class: 'yt-player'}).prependTo($ytPlayerWrapper);
+            $ytPlayerWrapper.prependTo($ytEl);
           }
           $ytPlayer.attr('src', buildYoutubeEmbedUrl(videoId));
           playerInitialized = true;
@@ -138,6 +130,19 @@
       });
 
     return this;
+  };
+
+  $.fn.ytChanPlayer.defaults = {
+    apiKey: '',
+    username: '',
+    maxResults: 10,
+    debug: false,
+    playerOpts: {
+      autohide: 1,
+      autoplay: 0,
+      fs: 1,
+      showinfo: 0
+    }
   };
 
 }(jQuery));
